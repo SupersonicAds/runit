@@ -167,10 +167,12 @@ exec svlogd -tt #{new_resource.log_dir}
 
     def stop_service
       shell_out!("#{new_resource.sv_bin} #{sv_args}force-stop #{service_dir_name}")
+    rescue
     end
 
     def restart_service
       shell_out!("#{new_resource.sv_bin} #{sv_args}force-restart #{service_dir_name}")
+    rescue
     end
 
     def restart_log_service

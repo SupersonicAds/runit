@@ -35,6 +35,7 @@ doc/
 .idea
 
 # chef stuff
+.chef
 Berksfile.lock
 .kitchen
 .kitchen.local.yml
